@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods/issues"
   },
-  "homepage": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods#readme"
+  "homepage": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
