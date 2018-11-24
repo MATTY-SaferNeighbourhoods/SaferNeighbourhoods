@@ -23,6 +23,7 @@ class MapComponent extends Component {
         this.renderAssaults = this.renderAssaults.bind(this);
         this.renderThefts = this.renderThefts.bind(this);
         this.renderCollisions = this.renderCollisions.bind(this);
+        this.getLocation = this.getLocation.bind(this);
     }
 
     componentDidMount(){
@@ -56,6 +57,10 @@ class MapComponent extends Component {
     renderAssaults = () =>{
         this.setState({showAssaultData: !this.state.showAssaultData})
     };
+
+    getLocation = () =>{
+       // geolocation 
+    }
 
     render(){
         return (
