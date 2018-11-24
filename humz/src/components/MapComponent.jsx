@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import GoogleMapReact from 'google-map-react';
-require('dotenv').config();
+require('dotenv').config()
 
 
+ let styles = {
+    color: 'blue',
+    border: 'solid'
+  };
+
+  const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
 
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => <div style={styles}>{text}</div>;
 
 
 class MapComponent extends Component {
@@ -43,7 +49,7 @@ class MapComponent extends Component {
                 <h1> Map Goes Here </h1>
                 <div style={{ height: '50vh', width: '100%' }}>
                 <GoogleMapReact
-                bootstrapURLKeys={{ key: 'AIzaSyAhxD_46rmSKa-1LlFjGO4-eY2KuyWmzTY'}}
+                // bootstrapURLKeys={{ key: API_KEY}}
                 defaultCenter={{lat:43.802116, 
                                 lng: -79.17601}}
                 defaultZoom={9}
