@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import MapComponent from './components/MapComponent.jsx';
+import MapComponent from './pages/Discussions/MapComponent.jsx';
 
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
