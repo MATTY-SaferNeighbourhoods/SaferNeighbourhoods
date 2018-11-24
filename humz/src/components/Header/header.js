@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import "./HomePage.css";
+import "./header.css";
 
 class Header extends Component {
     render () {
         return (
-            <div className="HomePage__header h3">
-                MATTY Community
+            <div className="header h3">
+                {this.props.headerName}
             </div>
 
         )

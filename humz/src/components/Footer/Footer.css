@@ -1,5 +1,5 @@
 .footer{
-    border-top: 2px solid cornflowerblue;
+    border-top: 2px solid black;
     text-align: center;
     padding: 20px;
     position: fixed;
@@ -8,7 +8,7 @@
     height: 60px;
     width: 100%;
     font-style:bolder;
-    background-color: white;
+    background-color: #d8d8d8;
 };
 
 .phantom{

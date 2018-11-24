@@ -3,21 +3,19 @@ import React, { Component } from 'react';
 // import Button from "./item"
 // import API from "../../utils/API";
 // import { connect } from 'react-redux';
-import Header from './header.js';
+import Header from '../../components/Header/header.js';
 import AssetsandISO from './AssetsandISO.js';
 
 class HomePage extends Component {
   render() {
     return (
       <div> 
-        <Header />
+        <Header headerName="MATTY Community"/>
         <div class="HomePage__mainbody">
         <AssetsandISO 
-        name="Assets"
-        backgroundColor="white" />
+        name="Assets" />
         <AssetsandISO 
-        name="ISO" 
-        backgroundColor="white" />
+        name="ISO" />
         </div>
       </div>
     );
