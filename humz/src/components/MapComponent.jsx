@@ -7,53 +7,22 @@ import CollisionComponent from './CollisionComponent.jsx'
 require('dotenv').config()
 
 
-  const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-
-
-
-//   const TheftComponent = ({ text }) => (
-//     <div style={{
-//       color: 'white', 
-//       background: 'green',
-//       padding: '15px 10px',
-//       display: 'inline-flex',
-//       textAlign: 'center',
-//       alignItems: 'center',
-//       justifyContent: 'center',
-//       borderRadius: '100%',
-//       transform: 'translate(-50%, -50%)'
-//     }}>
-//       {text}
-//     </div>
-//   );
-
-//   const CollisionComponent = ({ text }) => (
-//     <div style={{
-//       color: 'white', 
-//       background: 'red',
-//       padding: '15px 10px',
-//       display: 'inline-flex',
-//       textAlign: 'center',
-//       alignItems: 'center',
-//       justifyContent: 'center',
-//       borderRadius: '100%',
-//       transform: 'translate(-50%, -50%)'
-//     }}>
-//       {text}
-//     </div>
-//   );
-  
-
 
 class MapComponent extends Component {
     constructor(props){
         super(props);
         this.state={
+            showTheftData: true,
+            showAssaultData: true,
+            showCollisionData: true,
             theftData:[],
             assaultData: [],
             collisionData:[]
 
         }
+        this.renderAssaults = this.renderAssaults.bind(this);
+        this.renderThefts = this.renderThefts.bind(this);
+        this.renderCollisions = this.renderCollisions.bind(this);
     }
 
     componentDidMount(){
@@ -73,22 +42,40 @@ class MapComponent extends Component {
            
 
     }
+
+    renderCollisions = () => {
+        this.setState({showCollisionData: !this.state.showCollisionData})
+    };
+
+    renderThefts = () => {
+        console.log('clicked')
+        this.setState({showTheftData: !this.state.showTheftData})
+        
+    };
+
+    renderAssaults = () =>{
+        this.setState({showAssaultData: !this.state.showAssaultData})
+    };
+
     render(){
         return (
             <div>
                 <h1> Map Goes Here </h1>
                 
                 <div style={{ height: '50vh', width: '100%' }}>
+                <button onClick={()=> this.renderCollisions()}> Show Collisions </button>
+                <button onClick={()=> this.renderAssaults()}> Show Assaults </button>
+                <button onClick={()=> this.renderThefts()}> Show Thefts </button>
                 <GoogleMapReact
                 bootstrapURLKeys={{ key: 'AIzaSyAhxD_46rmSKa-1LlFjGO4-eY2KuyWmzTY'}}
                 defaultCenter={{lat:43.6532, 
                                 lng: -79.3832}}
                 defaultZoom={11}
                 >
-                {this.state.assaultData.map((incident)=> <AssaultComponent lat={incident.lat} lng={incident.long} text='Assault' />)}
-                {this.state.theftData.map((incident)=> <TheftComponent lat={incident.lat} lng={incident.long} text='Theft' />)}
-                {this.state.collisionData.map((incident)=> <CollisionComponent lat={incident.latitude} lng={incident.longitude} text='Collision' />)}
-              
+                { this.state.showAssaultData && this.state.assaultData.map((incident)=> <AssaultComponent lat={incident.lat} lng={incident.long} text='Assault' />)}
+                { this.state.showTheftData && this.state.theftData.map((incident)=> <TheftComponent lat={incident.lat} lng={incident.long} text='Theft' />)}
+                { this.state.showCollisionData && this.state.collisionData.map((incident)=> <CollisionComponent lat={incident.latitude} lng={incident.longitude} text='Collision' />)}
+        
                 </GoogleMapReact>
                 </div>
             </div>
