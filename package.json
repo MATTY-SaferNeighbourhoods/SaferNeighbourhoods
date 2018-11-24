@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods/issues"
   },
-  "homepage": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods#readme"
+  "homepage": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
 }

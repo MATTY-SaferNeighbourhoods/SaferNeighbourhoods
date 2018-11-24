@@ -1,0 +1,25 @@
+.footer{
+    border-top: 2px solid cornflowerblue;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    font-style:bolder;
+    background-color: white;
+};
+
+.phantom{
+    display: block;
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+  }
+
+
+
+
+
+
