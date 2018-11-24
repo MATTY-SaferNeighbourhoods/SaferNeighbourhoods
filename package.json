@@ -1,0 +1,20 @@
+{
+  "name": "SaferNeighbourhoods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods/issues"
+  },
+  "homepage": "https://github.com/MATTY-SaferNeighbourhoods/SaferNeighbourhoods#readme"
+}
