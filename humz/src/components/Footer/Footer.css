@@ -15,6 +15,9 @@
 a{
     color:black;
 }
+a:link{
+    color:black;
+}
 a:visited{
     color:black;
 }
