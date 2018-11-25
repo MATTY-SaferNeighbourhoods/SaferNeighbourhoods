@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MatyProfile from './MatyProfile.png';
+import MatyProfile from './MATTYProfile.png';
 import './UserProfile.css';
 
 class UserProfile extends Component {
