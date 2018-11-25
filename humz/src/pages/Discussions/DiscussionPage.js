@@ -8,7 +8,9 @@ class DiscussionPage extends Component {
       return (
         <div> 
             <Header headerName="Discussion" />
+            <div className="discussion__mainbody">
             <MapComponent />
+            </div>
         </div>
       );
     }

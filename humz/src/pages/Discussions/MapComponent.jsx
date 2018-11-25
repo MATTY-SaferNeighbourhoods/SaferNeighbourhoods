@@ -4,6 +4,7 @@ import GoogleMapReact from "google-map-react";
 import AssaultComponent from "./AssaultComponent.jsx";
 import TheftComponent from "./TheftComponent.jsx";
 import CollisionComponent from "./CollisionComponent.jsx";
+import DiscussionTable from './DiscussionTable.js';
 import { runInThisContext } from "vm";
 require("dotenv").config();
 
@@ -87,10 +88,17 @@ class MapComponent extends Component {
       <div>
         <div style={{ height: "50vh", width: "100%" }}>
           <form>
-            <input
+            <label>
+              Show &nbsp;
+            </label>
+            <input type="text"
               value={this.state.shownLimit}
               onChange={this.changeHandler}
+              size="5"
             />
+            <label>
+            &nbsp; Incidents
+            </label>
           </form>
           <div className="row justify-content-center buttonBox">
           <button className="buttonRender" onClick={() => this.renderCollisions()}>
@@ -144,6 +152,7 @@ class MapComponent extends Component {
                 }
               })}
           </GoogleMapReact>
+          <DiscussionTable />
         </div>
       </div>
     );
