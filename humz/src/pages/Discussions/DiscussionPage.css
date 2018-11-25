@@ -1,0 +1,12 @@
+body{
+    height:100%;
+}
+.buttonRender{
+    background-color:rgba(101, 204, 183,0.25);
+    border-radius: 25px;
+    /* margin: 3px; */
+}
+/* .buttonBox{
+    display:flex;
+    justify-content:space-between;
+} */

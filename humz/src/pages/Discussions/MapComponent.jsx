@@ -85,8 +85,6 @@ class MapComponent extends Component {
   render() {
     return (
       <div>
-        <h1> Discussion Board </h1>
-
         <div style={{ height: "50vh", width: "100%" }}>
           <form>
             <input
@@ -94,12 +92,14 @@ class MapComponent extends Component {
               onChange={this.changeHandler}
             />
           </form>
-          <button onClick={() => this.renderCollisions()}>
+          <div className="row justify-content-center buttonBox">
+          <button className="buttonRender" onClick={() => this.renderCollisions()}>
             {" "}
             Show Collisions{" "}
           </button>
-          <button onClick={() => this.renderAssaults()}> Show Assaults </button>
-          <button onClick={() => this.renderThefts()}> Show Thefts </button>
+          <button className="buttonRender" onClick={() => this.renderAssaults()}> Show Assaults </button>
+          <button className="buttonRender" onClick={() => this.renderThefts()}> Show Thefts </button>
+          </div>
           <GoogleMapReact
             bootstrapURLKeys={{
               key: "AIzaSyAhxD_46rmSKa-1LlFjGO4-eY2KuyWmzTY"

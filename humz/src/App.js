@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import MapComponent from './pages/Discussions/MapComponent.jsx';
-
+import DiscussionPage from './pages/Discussions/DiscussionPage';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import UserProfile from './pages/UserProfile';
@@ -15,7 +14,7 @@ class App extends Component {
         <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/discussions" component={MapComponent} />
+        <Route exact path="/discussions" component={DiscussionPage} />
         <Route exact path="/userprofile" component={UserProfile} />
       </Switch>
       <Footer />
