@@ -4,6 +4,7 @@ import MapComponent from './pages/Discussions/MapComponent.jsx';
 
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import UserProfile from './pages/UserProfile';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -15,8 +16,8 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/discussions" component={MapComponent} />
+        <Route exact path="/userprofile" component={UserProfile} />
       </Switch>
-
       <Footer />
       </div>
       </Router>
