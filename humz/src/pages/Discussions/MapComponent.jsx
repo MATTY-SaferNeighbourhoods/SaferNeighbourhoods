@@ -152,6 +152,26 @@ class MapComponent extends Component {
                 }
               })}
           </GoogleMapReact>
+          <br></br>
+          <form>
+            <label>
+              <h5>Create Alert</h5>
+            </label>
+            <div className="form-group row">
+            <label for="type" className="col-sm-2 col-form-label">Alert</label>
+            <div className="col-sm-10">
+              <input type="type" className="form-control" placeholder="Alert" />
+            </div>
+            </div>
+            <div className="form-group row">
+            <label for="type" className="col-sm-2 col-form-label">Description</label>
+            <div className="col-sm-10">
+              <input type="type" className="form-control" placeholder="Description" />
+            </div>
+            </div>
+            <button type="button" class="btn btn-danger">Broadcast Alert</button>
+          </form>
+          <br></br>
           <DiscussionTable />
         </div>
       </div>
